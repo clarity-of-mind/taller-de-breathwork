@@ -191,6 +191,11 @@ function Index() {
               </div>
             ))}
             <div className="bg-deep p-6 sm:col-span-2">
+              <dt className="kicker">Facilitador</dt>
+              <dd className="mt-2 font-serif text-2xl">{EVENT.facilitator}</dd>
+            </div>
+
+            <div className="bg-deep p-6 sm:col-span-2">
               <dt className="kicker">Precio final</dt>
               <dd className="mt-2 font-serif text-2xl">{EVENT.price}</dd>
             </div>
