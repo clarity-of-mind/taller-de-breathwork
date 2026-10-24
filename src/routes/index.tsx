@@ -25,7 +25,9 @@ const EVENT = {
   date: "Viernes, 20 de noviembre",
   time: "A las 17:00 h",
   place: "Alcázar de San Juan",
-  location: "Instituto Holístico (Av. Álvarez Guerra, 22)",
+  location: "Instituto Holístico",
+  address: "(Av. Álvarez Guerra, 22)",
+
 
   price: "22 €",
   facilitator: "Ana María",
@@ -181,24 +183,30 @@ function Index() {
         <div className="mx-auto max-w-3xl">
           <h2 className="text-center text-4xl md:text-5xl">Información del evento</h2>
           <dl className="mt-10 grid gap-px overflow-hidden rounded-3xl bg-deep-foreground/15 sm:grid-cols-2">
-            {[
-              ["Fecha y hora", `${EVENT.date} · ${EVENT.time}`],
-              ["Facilitadora", EVENT.facilitator],
-            ].map(([k, v]) => (
+            <div className="bg-deep p-6">
+              <dt className="kicker">Fecha y hora</dt>
+              <dd className="mt-2 font-serif text-2xl">
+                {EVENT.date}
+                <span className="mt-1 block text-lg text-deep-foreground/80">{EVENT.time}</span>
+              </dd>
+            </div>
+            <div className="bg-deep p-6">
+              <dt className="kicker">Facilitadora</dt>
+              <dd className="mt-2 font-serif text-2xl">{EVENT.facilitator}</dd>
+            </div>
 
-              <div key={k} className="bg-deep p-6">
-                <dt className="kicker">{k}</dt>
-                <dd className="mt-2 font-serif text-2xl">{v}</dd>
-              </div>
-            ))}
             <div className="bg-deep p-6 sm:col-span-2">
               <dt className="kicker">Lugar</dt>
               <dd className="mt-2 font-serif text-2xl">{EVENT.place}</dd>
             </div>
             <div className="bg-deep p-6 sm:col-span-2">
               <dt className="kicker">Ubicación</dt>
-              <dd className="mt-2 font-serif text-2xl">{EVENT.location}</dd>
+              <dd className="mt-2 font-serif text-2xl">
+                {EVENT.location}
+                <span className="mt-1 block text-lg text-deep-foreground/80">{EVENT.address}</span>
+              </dd>
             </div>
+
 
 
             <div className="bg-deep p-6 sm:col-span-2">
