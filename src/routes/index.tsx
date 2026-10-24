@@ -180,10 +180,9 @@ function Index() {
           <h2 className="text-center text-4xl md:text-5xl">Información del evento</h2>
           <dl className="mt-10 grid gap-px overflow-hidden rounded-3xl bg-deep-foreground/15 sm:grid-cols-2">
             {[
-              ["Ciudad", EVENT.city],
               ["Fecha y hora", `${EVENT.date} · ${EVENT.time}`],
               ["Lugar", EVENT.place],
-              ["Facilitador", EVENT.facilitator],
+
             ].map(([k, v]) => (
               <div key={k} className="bg-deep p-6">
                 <dt className="kicker">{k}</dt>
