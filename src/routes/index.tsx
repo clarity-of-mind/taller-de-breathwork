@@ -21,11 +21,11 @@ export const Route = createFileRoute("/")({
 const WHATSAPP = "https://wa.me/";
 
 const EVENT = {
-  city: "Valencia",
-  date: "Sábado, 24 de octubre",
+  city: "Alcázar de San Juan",
+  date: "Viernes, 20 de noviembre",
   time: "De 17:00 a 20:00 h",
-  place: "Eurostars Acteon",
-  price: "El valor final del evento es 70 €, ahora solo pagas la reserva de 20 €",
+  place: "Alcázar de San Juan",
+  price: "El valor final del evento es 22 €",
   facilitator: "[Nombre de quien facilita]",
 };
 
@@ -36,7 +36,7 @@ const faqs: [string, string[]][] = [
   ["¿Cómo es la política de cancelación?", ["Queremos asegurarnos de que tu experiencia sea inolvidable, por lo que dedicamos mucho cuidado y recursos a cada detalle del evento. Por esta razón, no es posible realizar cancelaciones ni cambios de fecha una vez hecha la reserva.", "Sin embargo, si no puedes asistir, estaremos encantados de ayudarte a transferir tu lugar a otra persona que pueda disfrutar del evento en tu lugar, siempre y cuando lo notifiques con antelación.", "En caso de cancelación del evento por parte de la organización, se procede a la devolución íntegra del importe abonado."]],
   ["¿Existen contraindicaciones?", ["Todo el mundo puede beneficiarse del poder del breathwork. De hecho, si estás atravesando alguna dificultad, te animamos especialmente a venir para ayudar a equilibrar tu cuerpo y tu sistema nervioso.", "Informa al facilitador si tienes: problemas cardiovasculares no controlados (angina, infarto, hipertensión no controlada), aneurisma, epilepsia, problemas psiquiátricos graves, trastorno bipolar, osteoporosis, cirugía reciente, glaucoma o si estás embarazada.", "Las personas con asma deben traer su inhalador e informar al facilitador."]],
   ["¿Por qué este evento es diferente a otros retiros o talleres?", ["Porque no enseñamos teoría. No damos charlas.", "Lo que ocurre en el espacio es un proceso fisiológico real; la química de tu cuerpo no volverá a ser la misma. Además, te guiarán profesionales en un entorno creado para que tu sistema nervioso se sienta seguro y pueda soltar. El cambio ocurre en el cuerpo, no en la cabeza."]],
-  ["¿Cuál es el valor total del evento?", ["El coste total del evento es de 70 €.", "El pago que realizas ahora es solo para reservar tu plaza y se descontará del coste total.", "El resto se abona el día del evento a tu llegada. Puedes pagar con tarjeta de débito o crédito, o en efectivo.", "Tu reserva te garantiza un lugar dentro del aforo limitado del evento."]],
+  ["¿Cuál es el valor total del evento?", ["El coste total del evento es de 22 €.", "El pago que realizas ahora es solo para reservar tu plaza y se descontará del coste total.", "El resto se abona el día del evento a tu llegada. Puedes pagar con tarjeta de débito o crédito, o en efectivo.", "Tu reserva te garantiza un lugar dentro del aforo limitado del evento."]],
   ["¿Pueden asistir menores?", ["No. Nuestros eventos presenciales no están diseñados específicamente para menores.", "Si te interesa una experiencia en familia o una sesión específica para niños, puedes hablar directamente con nuestros facilitadores después del evento para explorar opciones especiales."]],
 ];
 
@@ -180,16 +180,20 @@ function Index() {
           <h2 className="text-center text-4xl md:text-5xl">Información del evento</h2>
           <dl className="mt-10 grid gap-px overflow-hidden rounded-3xl bg-deep-foreground/15 sm:grid-cols-2">
             {[
-              ["Ciudad", EVENT.city],
               ["Fecha y hora", `${EVENT.date} · ${EVENT.time}`],
               ["Lugar", EVENT.place],
-              ["Facilitador", EVENT.facilitator],
+
             ].map(([k, v]) => (
               <div key={k} className="bg-deep p-6">
                 <dt className="kicker">{k}</dt>
                 <dd className="mt-2 font-serif text-2xl">{v}</dd>
               </div>
             ))}
+            <div className="bg-deep p-6 sm:col-span-2">
+              <dt className="kicker">Facilitador</dt>
+              <dd className="mt-2 font-serif text-2xl">{EVENT.facilitator}</dd>
+            </div>
+
             <div className="bg-deep p-6 sm:col-span-2">
               <dt className="kicker">Precio final</dt>
               <dd className="mt-2 font-serif text-2xl">{EVENT.price}</dd>
