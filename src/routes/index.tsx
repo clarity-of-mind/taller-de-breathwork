@@ -25,6 +25,8 @@ const EVENT = {
   date: "Viernes, 20 de noviembre",
   time: "A las 17:00 h",
   place: "Alcázar de San Juan",
+  location: "Instituto Holístico (Av. Álvarez Guerra, 22)",
+
   price: "22 €",
   facilitator: "Ana María",
 };
@@ -181,18 +183,23 @@ function Index() {
           <dl className="mt-10 grid gap-px overflow-hidden rounded-3xl bg-deep-foreground/15 sm:grid-cols-2">
             {[
               ["Fecha y hora", `${EVENT.date} · ${EVENT.time}`],
-              ["Lugar", EVENT.place],
-
+              ["Facilitadora", EVENT.facilitator],
             ].map(([k, v]) => (
+
               <div key={k} className="bg-deep p-6">
                 <dt className="kicker">{k}</dt>
                 <dd className="mt-2 font-serif text-2xl">{v}</dd>
               </div>
             ))}
             <div className="bg-deep p-6 sm:col-span-2">
-              <dt className="kicker">Facilitador</dt>
-              <dd className="mt-2 font-serif text-2xl">{EVENT.facilitator}</dd>
+              <dt className="kicker">Lugar</dt>
+              <dd className="mt-2 font-serif text-2xl">{EVENT.place}</dd>
             </div>
+            <div className="bg-deep p-6 sm:col-span-2">
+              <dt className="kicker">Ubicación</dt>
+              <dd className="mt-2 font-serif text-2xl">{EVENT.location}</dd>
+            </div>
+
 
             <div className="bg-deep p-6 sm:col-span-2">
               <dt className="kicker">Precio</dt>
