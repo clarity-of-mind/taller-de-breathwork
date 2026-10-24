@@ -18,15 +18,15 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WHATSAPP = "https://wa.me/";
+const WHATSAPP = "https://wa.me/34658454195";
 
 const EVENT = {
   city: "Alcázar de San Juan",
   date: "Viernes, 20 de noviembre",
-  time: "De 17:00 a 20:00 h",
+  time: "A las 17:00 h",
   place: "Alcázar de San Juan",
-  price: "El valor final del evento es 22 €",
-  facilitator: "[Nombre de quien facilita]",
+  price: "22 €",
+  facilitator: "Ana María",
 };
 
 const faqs: [string, string[]][] = [
@@ -107,7 +107,7 @@ function Index() {
         <p className="mx-auto mt-6 max-w-xl text-muted-foreground leading-relaxed">
           Una experiencia de respiración consciente para liberar tensión, calmar la mente y reconectar con tu cuerpo y tus emociones.
         </p>
-        <p className="mt-6 text-sm text-muted-foreground">Próximos talleres · Consulta fechas por WhatsApp</p>
+        <p className="mt-6 text-sm text-muted-foreground">Plazas limitadas · Reserva tu plaza por WhatsApp</p>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           <Btn href={WHATSAPP}>Consultar próximos talleres</Btn>
           <Btn href="#que-es" variant="ghost">Quiero saber más</Btn>
@@ -195,7 +195,7 @@ function Index() {
             </div>
 
             <div className="bg-deep p-6 sm:col-span-2">
-              <dt className="kicker">Precio final</dt>
+              <dt className="kicker">Precio</dt>
               <dd className="mt-2 font-serif text-2xl">{EVENT.price}</dd>
             </div>
           </dl>
@@ -205,7 +205,7 @@ function Index() {
       <section className="bg-secondary/60 px-6 py-20 text-center">
         <p className="kicker">Próximos talleres</p>
         <h2 className="mx-auto mt-4 max-w-xl text-4xl text-primary md:text-5xl">Reserva tu lugar en el próximo encuentro</h2>
-        <p className="mx-auto mt-6 max-w-md text-muted-foreground">Plazas limitadas para cuidar cada detalle. Escríbenos y te contamos fechas, lugar y precio.</p>
+        <p className="mx-auto mt-6 max-w-md text-muted-foreground">Plazas limitadas para cuidar cada detalle. Escríbenos y te confirmamos tu plaza.</p>
         <div className="mt-8">
           <Btn href={WHATSAPP}>Escríbenos por WhatsApp</Btn>
         </div>
