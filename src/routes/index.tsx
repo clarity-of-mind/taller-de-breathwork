@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import hero from "@/assets/hero-breath.jpg";
+import facilitatorPhoto from "@/assets/ana-maria.jpeg.asset.json";
 
 const TITLE = "Mucho más que Breathwork | Evento inmersivo";
 const DESC = "Una experiencia inmersiva de respiración consciente para soltar tensión, calmar la mente y reconectar con tu cuerpo.";
@@ -129,7 +130,7 @@ function Index() {
       <section id="que-es" className="bg-secondary/60 px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <p className="kicker">Esto es...</p>
-          <h2 className="mt-4 text-4xl text-primary md:text-5xl">Una tarde para <em className="text-gold">volver</em></h2>
+          <h2 className="mt-4 text-4xl text-primary md:text-5xl">Una tarde para <em className="text-gold">volver a ti</em></h2>
           <div className="mt-8 space-y-5 leading-relaxed text-muted-foreground">
             <p>Este viaje respiratorio está diseñado para transformar tu estado interno desde la raíz: tu química.</p>
             <p>Esta no es una respiración cualquiera. Es una herramienta bioquímica que te permite romper con patrones emocionales, energéticos y mentales, y comenzar a crear un nuevo estado desde el cuerpo.</p>
@@ -216,10 +217,6 @@ function Index() {
                 <span className="mt-1 block text-lg text-deep-foreground/80">{EVENT.time}</span>
               </dd>
             </div>
-            <div className="bg-deep p-6">
-              <dt className="kicker">Facilitadora</dt>
-              <dd className="mt-2 font-serif text-2xl">{EVENT.facilitator}</dd>
-            </div>
 
             <div className="bg-deep p-6 sm:col-span-2">
               <dt className="kicker">Lugar</dt>
@@ -238,6 +235,13 @@ function Index() {
             <div className="bg-deep p-6 sm:col-span-2">
               <dt className="kicker">Precio</dt>
               <dd className="mt-2 font-serif text-2xl">{EVENT.price}</dd>
+            </div>
+            <div className="bg-deep p-6 sm:col-span-2">
+              <dt className="kicker">Facilitadora</dt>
+              <dd className="mt-2 font-serif text-2xl">
+                {EVENT.facilitator}
+                <img src={facilitatorPhoto.url} alt="Ana María, facilitadora del evento" width={706} height={948} loading="lazy" className="mt-5 w-full max-w-xs rounded-lg" />
+              </dd>
             </div>
           </dl>
         </div>

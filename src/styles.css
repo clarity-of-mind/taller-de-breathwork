@@ -68,28 +68,28 @@
 
 :root {
   --radius: 1rem;
-  --background: oklch(0.975 0.012 85);
-  --foreground: oklch(0.3 0.045 200);
-  --card: oklch(0.99 0.008 85);
-  --card-foreground: oklch(0.3 0.045 200);
-  --popover: oklch(0.99 0.008 85);
-  --popover-foreground: oklch(0.3 0.045 200);
-  --primary: oklch(0.36 0.055 200);
-  --primary-foreground: oklch(0.975 0.012 85);
-  --secondary: oklch(0.94 0.02 85);
-  --secondary-foreground: oklch(0.3 0.045 200);
-  --muted: oklch(0.94 0.02 85);
-  --muted-foreground: oklch(0.5 0.03 200);
-  --accent: oklch(0.7 0.11 75);
-  --accent-foreground: oklch(0.25 0.04 200);
+  --background: oklch(0.98212 0 0);
+  --foreground: oklch(0.22645 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22645 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22645 0 0);
+  --primary: oklch(0.29373 0.10781 341.89);
+  --primary-foreground: oklch(0.98212 0 0);
+  --secondary: oklch(0.87240 0.03523 9.02);
+  --secondary-foreground: oklch(0.22645 0 0);
+  --muted: oklch(0.95147 0.01110 3.50);
+  --muted-foreground: oklch(0.45525 0.02 352.17);
+  --accent: oklch(0.87240 0.03523 9.02);
+  --accent-foreground: oklch(0.29373 0.10781 341.89);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.88 0.03 80);
-  --input: oklch(0.88 0.03 80);
-  --ring: oklch(0.7 0.11 75);
-  --gold: oklch(0.7 0.11 75);
-  --deep: oklch(0.28 0.045 200);
-  --deep-foreground: oklch(0.95 0.02 85);
+  --border: oklch(0.82182 0.03030 356.45);
+  --input: oklch(0.82182 0.03030 356.45);
+  --ring: oklch(0.45525 0.13049 352.17);
+  --gold: oklch(0.45525 0.13049 352.17);
+  --deep: oklch(0.22645 0 0);
+  --deep-foreground: oklch(0.98212 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -120,6 +120,7 @@
   body { font-family: var(--font-sans); font-weight: 300; }
   h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; }
 }
+.bg-deep { --gold: var(--accent); }
 @utility kicker { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
 @keyframes breathe { 0%,100% { transform: scale(0.7); opacity: .55 } 50% { transform: scale(1); opacity: 1 } }
 @utility animate-breathe { animation: breathe 10s ease-in-out infinite; }
