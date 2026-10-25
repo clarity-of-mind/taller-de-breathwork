@@ -1,8 +1,8 @@
 # Cambios solicitados
 
-- [ ] Cambiar el título a «Una tarde para volver a ti».
-- [ ] Mover la facilitadora al último punto e incorporar su foto.
-- [ ] Aplicar los colores de clarityofmind.es y comprobar la página.
+- [x] Cambiar el título a «Una tarde para volver a ti».
+- [x] Mover la facilitadora al último punto e incorporar su foto.
+- [x] Aplicar los colores de clarityofmind.es y comprobar la página.
 
 - [x] Actualizar nombre, cabecera y botones de WhatsApp.
 - [x] Recuperar integración y escritura; mantener tarde sin duración.
