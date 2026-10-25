@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import hero from "@/assets/hero-breath.jpg";
 
-const TITLE = "Taller de Breathwork | Respira y vuelve a ti";
-const DESC = "Una experiencia vivencial de respiración consciente para soltar tensión, calmar la mente y reconectar con tu cuerpo.";
+const TITLE = "Mucho más que Breathwork | Evento inmersivo";
+const DESC = "Una experiencia inmersiva de respiración consciente para soltar tensión, calmar la mente y reconectar con tu cuerpo.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,12 +35,11 @@ const EVENT = {
 
 const faqs: [string, string[]][] = [
   ["¿Necesito experiencia previa con breathwork o meditación?", ["No necesitas ningún tipo de experiencia previa. Absolutamente ninguna. Solo necesitas la voluntad de querer hacer un trabajo por ti, dejarte guiar y abrirte al proceso de respirar. El resto lo hace tu cuerpo."]],
-  ["¿Qué ocurre durante la sesión? ¿Qué hago yo?", ["La sesión se lleva a cabo tumbados en una esterilla (la llevas tú), con los ojos cerrados y auriculares inalámbricos que llevamos nosotros. Bajo nuestra guía, siguiendo el proceso de respiración, disfrutas del viaje y la experiencia. Tú no tienes que hacer nada más que respirar y dejarte llevar. El proceso fisiológico hace el resto."]],
-  ["¿Es seguro? ¿Qué pasa si me pierdo o me asusto?", ["Sí, es completamente seguro. Nuestros facilitadores están contigo en todo momento y saben guiarte y sostenerte ante cualquier emoción que surja. De hecho, que surjan emociones intensas es parte del proceso: es el cuerpo liberando lo que lleva tiempo guardado. Estás en manos expertas."]],
+  ["¿Qué ocurre durante la sesión? ¿Qué hago yo?", ["La sesión se lleva a cabo tumbados en una esterilla (la llevas tú), con los ojos cerrados. Bajo nuestra guía, siguiendo el proceso de respiración, disfrutas del viaje y la experiencia. Tú no tienes que hacer nada más que respirar y dejarte llevar. El proceso fisiológico hace el resto."]],
+  ["¿Es seguro? ¿Qué pasa si me pierdo?", ["Sí, es completamente seguro. Nuestros facilitadores están contigo en todo momento y saben guiarte y sostenerte ante cualquier emoción que surja. De hecho, que surjan emociones intensas es parte del proceso: es el cuerpo liberando lo que lleva tiempo guardado. Estás en manos expertas."]],
   ["¿Cómo es la política de cancelación?", ["Queremos asegurarnos de que tu experiencia sea inolvidable, por lo que dedicamos mucho cuidado y recursos a cada detalle del evento. Por esta razón, no es posible realizar cancelaciones ni cambios de fecha una vez hecha la reserva.", "Sin embargo, si no puedes asistir, estaremos encantados de ayudarte a transferir tu lugar a otra persona que pueda disfrutar del evento en tu lugar, siempre y cuando lo notifiques con antelación.", "En caso de cancelación del evento por parte de la organización, se procede a la devolución íntegra del importe abonado."]],
   ["¿Existen contraindicaciones?", ["Todo el mundo puede beneficiarse del poder del breathwork. De hecho, si estás atravesando alguna dificultad, te animamos especialmente a venir para ayudar a equilibrar tu cuerpo y tu sistema nervioso.", "Informa al facilitador si tienes: problemas cardiovasculares no controlados (angina, infarto, hipertensión no controlada), aneurisma, epilepsia, problemas psiquiátricos graves, trastorno bipolar, osteoporosis, cirugía reciente, glaucoma o si estás embarazada.", "Las personas con asma deben traer su inhalador e informar al facilitador."]],
   ["¿Por qué este evento es diferente a otros retiros o talleres?", ["Porque no enseñamos teoría. No damos charlas.", "Lo que ocurre en el espacio es un proceso fisiológico real; la química de tu cuerpo no volverá a ser la misma. Además, te guiarán profesionales en un entorno creado para que tu sistema nervioso se sienta seguro y pueda soltar. El cambio ocurre en el cuerpo, no en la cabeza."]],
-  ["¿Cuál es el valor total del evento?", ["El coste total del evento es de 22 €.", "El pago que realizas ahora es solo para reservar tu plaza y se descontará del coste total.", "El resto se abona el día del evento a tu llegada. Puedes pagar con tarjeta de débito o crédito, o en efectivo.", "Tu reserva te garantiza un lugar dentro del aforo limitado del evento."]],
   ["¿Pueden asistir menores?", ["No. Nuestros eventos presenciales no están diseñados específicamente para menores.", "Si te interesa una experiencia en familia o una sesión específica para niños, puedes hablar directamente con nuestros facilitadores después del evento para explorar opciones especiales."]],
 ];
 
@@ -64,11 +63,14 @@ const steps = [
   ["Círculo y cierre", "Compartir desde la calma, en un espacio seguro."],
 ];
 
-const phases = [
-  ["Inhala", "Abrir"],
-  ["Retén", "Sentir"],
-  ["Exhala", "Soltar"],
-  ["Pausa", "Habitar"],
+const pathologies = [
+  "Epilepsia",
+  "Retina desprendida",
+  "Glaucoma",
+  "Hipertensión arterial no controlada",
+  "Angina de pecho",
+  "Arritmia no controlada",
+  "Accidentes cerebrovasculares",
 ];
 
 function Btn({ children, href, variant = "primary" }: { children: React.ReactNode; href: string; variant?: "primary" | "ghost" }) {
@@ -91,8 +93,7 @@ function Index() {
       <div className="h-1 bg-gold/70" />
 
       <section className="bg-deep px-6 py-8 text-center text-deep-foreground">
-        <p className="kicker">Últimas plazas disponibles</p>
-        <p className="mt-3 font-serif text-4xl md:text-5xl">{EVENT.city}</p>
+        <p className="font-serif text-4xl md:text-5xl">{EVENT.city}</p>
         <p className="mt-1 font-serif text-2xl italic text-gold md:text-3xl">{EVENT.date}</p>
         <p className="mt-1 text-sm tracking-widest uppercase text-deep-foreground/75">{EVENT.time}</p>
       </section>
@@ -102,9 +103,9 @@ function Index() {
           <span className="absolute inset-0 rounded-full bg-gold/30 animate-breathe" />
           <span className="absolute inset-4 rounded-full border border-gold" />
         </div>
-        <p className="kicker">Taller vivencial</p>
+        <p className="kicker">Evento inmersivo</p>
         <h1 className="mt-6 text-6xl leading-[0.95] text-primary md:text-8xl">
-          Taller de <br />
+          Mucho más que <br />
           <em className="text-gold">Breathwork</em>
         </h1>
         <p className="mt-8 text-xl text-primary md:text-2xl font-serif italic">Respira. Suelta. Vuelve a ti.</p>
@@ -113,18 +114,17 @@ function Index() {
         </p>
         <p className="mt-6 text-sm text-muted-foreground">Plazas limitadas · Reserva tu plaza por WhatsApp</p>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-          <Btn href={WHATSAPP}>Consultar próximos talleres</Btn>
-          <Btn href="#que-es" variant="ghost">Quiero saber más</Btn>
+          <Btn href={WHATSAPP}>Quiero saber más</Btn>
         </div>
       </section>
 
       <section id="que-es" className="bg-secondary/60 px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <p className="kicker">Qué es el taller</p>
-          <h2 className="mt-4 text-4xl text-primary md:text-5xl">Una mañana para <em className="text-gold">volver a respirar</em></h2>
+          <h2 className="mt-4 text-4xl text-primary md:text-5xl">Una tarde para <em className="text-gold">volver a respirar</em></h2>
           <div className="mt-8 space-y-5 leading-relaxed text-muted-foreground">
             <p>Respiramos unas 20.000 veces al día, casi siempre sin darnos cuenta. Cuando aprendemos a hacerlo con conciencia, la respiración se convierte en una puerta hacia la calma y la claridad.</p>
-            <p>Durante cuatro horas te guiaremos a través de técnicas de breathwork, movimiento, música y escritura para que puedas soltar lo que pesa y escucharte.</p>
+            <p>Te guiaremos a través de técnicas de breathwork, movimiento, música y escritura para que puedas soltar lo que pesa y escucharte.</p>
             <p className="font-serif text-2xl italic text-primary">No se explica. Se respira.</p>
           </div>
         </div>
@@ -163,20 +163,15 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-20 text-center">
-        <p className="kicker">El viaje</p>
-        <h2 className="mt-4 text-4xl text-primary md:text-5xl">El ritmo de la <em className="text-gold">respiración</em></h2>
-        <p className="mx-auto mt-6 max-w-xl font-serif text-xl italic leading-relaxed text-muted-foreground">
-          Vivimos en automático. Respiramos corto, deprisa, desde el pecho. En este taller te invitamos a recordar cómo se respira de verdad.
+      <section className="mx-auto max-w-3xl px-6 py-20">
+        <p className="font-serif text-2xl leading-relaxed text-primary md:text-3xl">
+          Si padeces alguna de estas patologías tienes que avisarlo antes de empezar la actividad para ajustar la intensidad de la experiencia:
         </p>
-        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
-          {phases.map(([a, b]) => (
-            <div key={a} className="rounded-full border border-gold/50 py-8">
-              <h4 className="text-2xl text-primary">{a}</h4>
-              <p className="mt-1 text-xs uppercase tracking-[0.25em] text-muted-foreground">{b}</p>
-            </div>
+        <ul className="mt-8 list-disc space-y-3 pl-6 text-muted-foreground marker:text-gold">
+          {pathologies.map((pathology) => (
+            <li key={pathology}>{pathology}</li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <section className="bg-deep px-6 py-20 text-deep-foreground">
@@ -218,8 +213,7 @@ function Index() {
       </section>
 
       <section className="bg-secondary/60 px-6 py-20 text-center">
-        <p className="kicker">Próximos talleres</p>
-        <h2 className="mx-auto mt-4 max-w-xl text-4xl text-primary md:text-5xl">Reserva tu lugar en el próximo encuentro</h2>
+        <h2 className="mx-auto mt-4 max-w-xl text-4xl text-primary md:text-5xl">Quiero mi plaza</h2>
         <p className="mx-auto mt-6 max-w-md text-muted-foreground">Plazas limitadas para cuidar cada detalle. Escríbenos y te confirmamos tu plaza.</p>
         <div className="mt-8">
           <Btn href={WHATSAPP}>Escríbenos por WhatsApp</Btn>
@@ -247,7 +241,7 @@ function Index() {
         </div>
       </section>
 
-      <footer className="py-10 text-center text-xs tracking-widest text-muted-foreground uppercase">Taller de Breathwork · Respira y vuelve a ti</footer>
+      <footer className="py-10 text-center text-xs tracking-widest text-muted-foreground uppercase">Mucho más que Breathwork · Respira y vuelve a ti</footer>
     </main>
   );
 }
