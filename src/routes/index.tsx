@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import hero from "@/assets/hero-breath.jpg";
+import hero from "@/assets/hero-inmersivo.jpg.asset.json";
 import facilitatorPhoto from "@/assets/ana-maria.jpeg.asset.json";
 
 const TITLE = "Mucho más que Breathwork | Evento inmersivo";
@@ -98,7 +98,7 @@ function Btn({ children, href, variant = "primary" }: { children: React.ReactNod
 function Index() {
   return (
     <main className="bg-background text-foreground">
-      <img src={hero} alt="Grupo practicando respiración consciente al aire libre" width={1600} height={1008} className="h-[52vh] w-full object-cover md:h-[70vh]" />
+      <img src={hero.url} alt="Sesión de respiración consciente con la facilitadora y participantes tumbadas" width={1024} height={1536} className="h-[52vh] w-full object-cover object-[center_28%] md:h-[70vh] md:object-[center_22%]" />
       <div className="h-1 bg-gold/70" />
 
       <section className="bg-deep px-6 py-8 text-center text-deep-foreground">
