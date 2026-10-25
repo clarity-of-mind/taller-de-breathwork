@@ -54,6 +54,14 @@ const forYou = [
   "Buscas un espacio cuidado, humano y seguro",
 ];
 
+const whoBenefits = [
+  "Han probado mucho desarrollo personal pero no lo ven tan reflejado en su vida.",
+  "Sienten que tienen más potencial del que están usando.",
+  "Llevan tiempo buscando algo que realmente se sienta diferente.",
+  "Quieren un cambio real, no otro concepto que entender.",
+];
+
+
 const steps = [
   ["Llegada y aterrizaje", "Para dejar fuera el ruido y entrar en el espacio."],
   ["Despertar del cuerpo", "Movimiento suave para preparar la respiración."],
@@ -120,13 +128,33 @@ function Index() {
 
       <section id="que-es" className="bg-secondary/60 px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="kicker">Qué es el taller</p>
-          <h2 className="mt-4 text-4xl text-primary md:text-5xl">Una tarde para <em className="text-gold">volver a respirar</em></h2>
+          <p className="kicker">Esto es...</p>
+          <h2 className="mt-4 text-4xl text-primary md:text-5xl">Una tarde para <em className="text-gold">volver</em></h2>
           <div className="mt-8 space-y-5 leading-relaxed text-muted-foreground">
-            <p>Respiramos unas 20.000 veces al día, casi siempre sin darnos cuenta. Cuando aprendemos a hacerlo con conciencia, la respiración se convierte en una puerta hacia la calma y la claridad.</p>
-            <p>Te guiaremos a través de técnicas de breathwork, movimiento, música y escritura para que puedas soltar lo que pesa y escucharte.</p>
-            <p className="font-serif text-2xl italic text-primary">No se explica. Se respira.</p>
+            <p>Este viaje respiratorio está diseñado para transformar tu estado interno desde la raíz: tu química.</p>
+            <p>Esta no es una respiración cualquiera. Es una herramienta bioquímica que te permite romper con patrones emocionales, energéticos y mentales, y comenzar a crear un nuevo estado desde el cuerpo.</p>
+            <p className="pt-3 font-serif text-2xl text-primary">¿Por qué funciona?</p>
+            <p>Porque cuando cambias tu respiración, cambias tu fisiología, y cuando cambias tu fisiología, cambias tu estado mental, emocional y energético.</p>
+            <p>Esta sesión es un puente directo para lograrlo.</p>
+            <p className="font-serif text-2xl italic text-primary">Cambia tu energía, cambia tu vida.</p>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-deep px-6 py-20 text-deep-foreground">
+        <div className="mx-auto max-w-4xl">
+          <div className="text-center">
+            <h2 className="text-3xl leading-tight md:text-5xl">¿Qué tipo de persona le saca más provecho a este evento?</h2>
+            <p className="mx-auto mt-5 max-w-xl text-deep-foreground/70">Lo hacemos hace años, así que lo tenemos bien claro. Son personas que:</p>
+          </div>
+          <ul className="mt-12 grid gap-3 sm:grid-cols-2">
+            {whoBenefits.map((t) => (
+              <li key={t} className="flex items-start gap-4 rounded-2xl border border-deep-foreground/15 bg-deep-foreground/5 px-5 py-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gold/15 text-gold">✓</span>
+                <span className="text-sm leading-relaxed sm:text-base">{t}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -135,6 +163,7 @@ function Index() {
           <p className="kicker">Para ti</p>
           <h2 className="mt-4 text-4xl text-primary md:text-5xl">Este taller es para ti si…</h2>
         </div>
+
         <ul className="mt-12 grid gap-3 sm:grid-cols-2">
           {forYou.map((t) => (
             <li key={t} className="flex items-center gap-4 rounded-2xl border border-border bg-card px-5 py-4">
@@ -164,9 +193,11 @@ function Index() {
       </section>
 
       <section className="mx-auto max-w-3xl px-6 py-20">
-        <p className="font-serif text-2xl leading-relaxed text-primary md:text-3xl">
+        <p className="kicker">Contraindicaciones</p>
+        <p className="mt-6 font-serif text-2xl leading-relaxed text-primary md:text-3xl">
           Si padeces alguna de estas patologías tienes que avisarlo antes de empezar la actividad para ajustar la intensidad de la experiencia:
         </p>
+
         <ul className="mt-8 list-disc space-y-3 pl-6 text-muted-foreground marker:text-gold">
           {pathologies.map((pathology) => (
             <li key={pathology}>{pathology}</li>
@@ -213,7 +244,9 @@ function Index() {
       </section>
 
       <section className="bg-secondary/60 px-6 py-20 text-center">
+        <p className="kicker">Última llamada</p>
         <h2 className="mx-auto mt-4 max-w-xl text-4xl text-primary md:text-5xl">Quiero mi plaza</h2>
+
         <p className="mx-auto mt-6 max-w-md text-muted-foreground">Plazas limitadas para cuidar cada detalle. Escríbenos y te confirmamos tu plaza.</p>
         <div className="mt-8">
           <Btn href={WHATSAPP}>Escríbenos por WhatsApp</Btn>
