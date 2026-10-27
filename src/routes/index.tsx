@@ -131,7 +131,7 @@ function Index() {
       <section id="que-es" className="bg-secondary/60 px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-4xl text-primary md:text-5xl">
-            <span className="block">Esto es</span>
+            <em className="block text-gold">Esto es</em>
             <span className="mt-1 block">una tarde para</span>
             <em className="mt-1 block text-gold">volver a ti</em>
           </h2>

@@ -18,3 +18,4 @@
 - [x] Cambiar la hora a «De 17:00 a 18:30» en la cabecera y en «Información del evento».
 - [x] Partir el titular en dos líneas: «Es una tarde» y debajo «volver a ti».
 - [x] Poner el titular de «Esto es» en tres líneas: «Esto es», «una tarde para», «volver a ti».
+- [x] Dar a «Esto es» el mismo formato que «volver a ti» (cursiva en tono rosado).
