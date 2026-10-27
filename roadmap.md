@@ -15,3 +15,4 @@
 - [x] Cambiar los fondos negros por el morado del botón «Quiero saber más».
 - [x] Sustituir la foto de portada por la nueva y comprobar el recorte.
 - [x] Añadir la pregunta «¿Qué tengo que llevar?» con la respuesta: esterilla, manta, cuaderno y boli, y agua.
+- [x] Cambiar la hora a «De 17 a 18:30» en la cabecera y en «Información del evento».
