@@ -14,3 +14,4 @@
 - [x] Comprobar la página en el móvil.
 - [x] Cambiar los fondos negros por el morado del botón «Quiero saber más».
 - [x] Sustituir la foto de portada por la nueva y comprobar el recorte.
+- [ ] Añadir la pregunta «¿Qué tengo que llevar?» con la respuesta: esterilla, manta, cuaderno y boli, y agua.
