@@ -12,3 +12,5 @@
 - [x] Añadir el bloque "¿Qué tipo de persona le saca más provecho a este evento?" antes de "Este taller es para ti".
 - [x] Añadir "Última llamada" y "Contraindicaciones" en color dorado/naranja.
 - [x] Comprobar la página en el móvil.
+- [x] Cambiar los fondos negros por el morado del botón «Quiero saber más».
+- [x] Sustituir la foto de portada por la nueva y comprobar el recorte.
