@@ -24,7 +24,7 @@ const WHATSAPP = "https://wa.me/34658454195";
 const EVENT = {
   city: "Alcázar de San Juan",
   date: "Viernes, 20 de noviembre",
-  time: "De 17 a 18:30",
+  time: "De 17:00 a 18:30",
   place: "Alcázar de San Juan",
   location: "Instituto Holístico",
   address: "(Av. Álvarez Guerra, 22)",
@@ -131,7 +131,7 @@ function Index() {
       <section id="que-es" className="bg-secondary/60 px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <p className="kicker">Esto es...</p>
-          <h2 className="mt-4 text-4xl text-primary md:text-5xl">Una tarde para <em className="text-gold">volver a ti</em></h2>
+          <h2 className="mt-4 text-4xl text-primary md:text-5xl">Es una tarde <em className="mt-1 block text-gold">volver a ti</em></h2>
           <div className="mt-8 space-y-5 leading-relaxed text-muted-foreground">
             <p>Este viaje respiratorio está diseñado para transformar tu estado interno desde la raíz: tu química.</p>
             <p>Esta no es una respiración cualquiera. Es una herramienta bioquímica que te permite romper con patrones emocionales, energéticos y mentales, y comenzar a crear un nuevo estado desde el cuerpo.</p>
