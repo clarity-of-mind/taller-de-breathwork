@@ -17,3 +17,4 @@
 - [x] Añadir la pregunta «¿Qué tengo que llevar?» con la respuesta: esterilla, manta, cuaderno y boli, y agua.
 - [x] Cambiar la hora a «De 17:00 a 18:30» en la cabecera y en «Información del evento».
 - [x] Partir el titular en dos líneas: «Es una tarde» y debajo «volver a ti».
+- [x] Poner el titular de «Esto es» en tres líneas: «Esto es», «una tarde para», «volver a ti».
