@@ -24,7 +24,7 @@ const WHATSAPP = "https://wa.me/34658454195";
 const EVENT = {
   city: "Alcázar de San Juan",
   date: "Viernes, 20 de noviembre",
-  time: "A las 17:00 h",
+  time: "De 17 a 18:30",
   place: "Alcázar de San Juan",
   location: "Instituto Holístico",
   address: "(Av. Álvarez Guerra, 22)",
