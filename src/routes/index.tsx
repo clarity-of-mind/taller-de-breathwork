@@ -86,7 +86,7 @@ function Btn({ children, href, variant = "primary" }: { children: React.ReactNod
   const base = "inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm tracking-wide transition-all";
   const v =
     variant === "primary"
-      ? "bg-primary text-primary-foreground hover:bg-deep shadow-lg shadow-primary/20"
+      ? "bg-primary text-primary-foreground hover:bg-primary/85 shadow-lg shadow-primary/20"
       : "border border-gold text-foreground hover:bg-gold/10";
   return (
     <a href={href} className={`${base} ${v}`}>
